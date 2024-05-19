@@ -1,0 +1,16 @@
+{
+    "configurations": [
+      {
+        "name": "Deploy Cloud Function",
+        "type": "cloudcode.cloudfunctions",
+        "request": "launch",
+        "functionName": "edinet-document-csv-to-bigquery",
+        "gen": "GEN_2",
+        "entryPoint": "main",
+        "revision": "edinet-document-csv-to-bigquery-00012-pow",
+        "testInput": "",
+        "region": "asia-northeast1",
+        "runtime": "python312"
+      }
+    ]
+}
