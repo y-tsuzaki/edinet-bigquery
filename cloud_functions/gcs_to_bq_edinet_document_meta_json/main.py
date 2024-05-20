@@ -16,7 +16,7 @@ GCS_JSON_PATH = 'doc_json'
 GCS_OUTPUT_PATH = 'temp_for_bq/documents_meta.csv'
 BQ_DATASET = 'edinet'
 BQ_TABLE = 'documents_meta'
-BATCH_SIZE = 10
+BATCH_SIZE = 100
 
 @functions_framework.http
 def main(request):
@@ -46,8 +46,6 @@ def main(request):
             
             with open(local_json_path, 'r', encoding='utf-8') as f:
                 file_content = f.read()
-
-                print(f'loaded :{file_content}')
 
                 match = re.search(r'/(\d{4}-\d{2}-\d{2})/', blob.name)
                 if match:
